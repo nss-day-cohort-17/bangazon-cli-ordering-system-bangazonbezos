@@ -1,4 +1,4 @@
-const {assert : {isFunction,isNumber,isArray,isObject}} =require('chai');
+const {assert : {isFunction,isNumber,isArray,isObject,equal}} =require('chai');
 const {getCustomerId,getOrderId,getProducts,getOrderTotal,getPaymentOptions,getPopularity,getProductId} = require('../lib/queryDB.js');
 
 describe ('queryDB',()=>{
@@ -6,8 +6,14 @@ describe ('queryDB',()=>{
     it('should be a function',()=>{
      isFunction(getCustomerId)
    });
-    it('should return a customerId',()=>{
-      isNumber(getCustomerId());
+    it('should return a customerid',()=>{
+      let expected = 7;
+      return getCustomerId("John","Denver")
+      .then((data)=>{
+        let result = data;
+        console.log(data)
+        equal(expected,result);
+      });
     });
   });
   describe ('getOrderId',()=>{
