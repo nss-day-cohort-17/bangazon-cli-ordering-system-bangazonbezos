@@ -1,5 +1,5 @@
 const {assert : {isFunction,isNumber,isArray,isObject,deepEqual,equal}} =require('chai');
-const {getCustomerId,getOrderId,getProducts,getOrderTotal,getPaymentOptions,getPopularity,getProductId,getActiveCustomers} = require('../lib/queryDB.js');
+const {getCustomerId,getOrderId,getProducts,getOrderTotal,getPaymentOptions,getPopularity,getProductId,getActiveCustomers,orderLineId} = require('../lib/queryDB.js');
 const {customers} = require('../customers.json');
 const {payment_options} =require('../paymentOptions.json')
 // console.log("customers",customers.customers)
@@ -159,5 +159,15 @@ describe ('queryDB',()=>{
      });
     });
   });
-
+  describe('orderLineId',()=>{
+    it('should be a function',()=>{
+      isFunction(orderLineId)
+    });
+    it('should return an array ',()=>{
+      return orderLineId()
+      .then((data)=>{
+        isArray(data)
+      });
+    })
+  });
 });
