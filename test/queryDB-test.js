@@ -116,7 +116,13 @@ describe ('queryDB',()=>{
       isFunction(getProductId)
     });
     it('should return a number',()=>{
-      isNumber(getProductId());
+      let expected = 10;
+      return getProductId()
+      .then ((data)=>{
+        let result = data;
+        console.log(data)
+        equal(expected,result);
+      });
     });
   });
 
