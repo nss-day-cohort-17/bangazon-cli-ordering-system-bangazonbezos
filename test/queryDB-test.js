@@ -1,6 +1,7 @@
 const {assert : {isFunction,isNumber,isArray,isObject,deepEqual,equal}} =require('chai');
-const {getCustomerId,getOrderId,getProducts,getOrderTotal,getPaymentOptions,getPopularity,getProductId} = require('../lib/queryDB.js');
-
+const {getCustomerId,getOrderId,getProducts,getOrderTotal,getPaymentOptions,getPopularity,getProductId,getActiveCustomers} = require('../lib/queryDB.js');
+const {customers} = require('../customers.json')
+// console.log("customers",customers.customers)
 describe ('queryDB',()=>{
   describe ('getCustomerId',()=>{
     it('should be a function',()=>{
@@ -123,6 +124,17 @@ describe ('queryDB',()=>{
         console.log(data)
         equal(expected,result);
       });
+    });
+  });
+  describe('getActiveCustomers',()=>{
+    it('should return an array of customers',()=>{
+      let expected = customers
+      return getActiveCustomers()
+      .then ((data)=>{
+        let result = data;
+        console.log("data from test",data)
+        deepEqual(expected,result)
+     });
     });
   });
 
