@@ -126,7 +126,12 @@ describe ('queryDB',()=>{
       isFunction(getPopularity)
     });
     it('should return an object',()=>{
-      isObject(getPopularity());
+      let expected = { name: 'nalgene water bottle', revenue: 169.83, quanity: 17 }
+      return getPopularity()
+      .then((data)=>{
+        let result = data;
+        deepEqual(expected,result)
+      });
     });
   });
   describe('getProductId', ()=>{
