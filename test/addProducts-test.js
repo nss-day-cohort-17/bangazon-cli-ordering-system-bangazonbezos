@@ -6,9 +6,6 @@ describe ('addProducts',()=>{
     it('should be a function',()=>{
       isFunction(addProducts);
     });
-    it('should have argument ',()=>{
-      throws(()=>{addProducts()})//doesn't have an argument
-    });
     it('should return a string', ()=>{
       isString(addProducts('1'));
     });
