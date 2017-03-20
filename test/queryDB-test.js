@@ -8,7 +8,7 @@ describe ('queryDB',()=>{
    });
     it('should return a customerid',()=>{
       let expected = 7;
-      return getCustomerId("John","Denver")
+      return getCustomerId()
       .then((data)=>{
         let result = data;
         console.log(data)
@@ -20,8 +20,14 @@ describe ('queryDB',()=>{
     it('should be a function',()=>{
       isFunction(getOrderId)
    });
-    it('should return a oredrId',()=>{
-      isNumber(getOrderId());
+    it('should return a orderid',()=>{
+      let expected = 13;
+      return getOrderId()
+      .then((data)=>{
+        let result = data;
+        console.log(data)
+        equal(expected,result);
+      });
     });
   });
   describe ('getProducts', ()=>{
