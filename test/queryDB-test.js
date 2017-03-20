@@ -94,7 +94,13 @@ describe ('queryDB',()=>{
       isFunction(getOrderTotal)
     });
     it('should return a number',()=>{
-      isNumber(getOrderTotal());
+      let expected = 209.97;
+      return getOrderTotal()
+      .then((data)=>{
+        let results = data;
+        console.log("orderTotal",data)
+        equal(expected,results);
+      });
     });
   });
   describe ('getPaymentOptions', ()=>{
