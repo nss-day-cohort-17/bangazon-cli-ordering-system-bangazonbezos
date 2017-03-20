@@ -1,0 +1,64 @@
+{
+  "payment_options": [
+    {
+      "name": "My Visa",
+      "accountnumber": "9874802567",
+      "customerid" : 10,
+      "paymentid" :1
+    },
+    {
+      "name": "Business Card",
+      "accountnumber": "8484537391",
+      "customerid" : 9,
+      "paymentid" :2
+    },
+    {
+      "name": "Southwest Card",
+      "accountnumber": "0471756398",
+      "customerid" : 8,
+      "paymentid" :3
+    },
+    {
+      "name": "Checking",
+      "accountnumber": "0192847623",
+      "customerid" : 7,
+      "paymentid" :4
+    },
+    {
+      "name": "Platinum Card",
+      "accountnumber": "1029384756",
+      "customerid" : 6,
+      "paymentid" :5
+    },
+    {
+      "name": "Travel Card",
+      "accountnumber": "1029384756",
+      "customerid" : 5,
+      "paymentid" :6
+    },
+    {
+      "name": "My Mastercard",
+      "accountnumber": "1010192836",
+      "customerid" : 4,
+      "paymentid" :7
+    },
+    {
+      "name": "My American Express",
+      "accountnumber": "9182736456",
+      "customerid" : 3,
+      "paymentid" :8
+    },
+    {
+      "name": "REI Card",
+      "accountnumber": "9384765142",
+      "customerid" : 2,
+      "paymentid" :9
+    },
+    {
+      "name": "My Visa",
+      "accountnumber": "9872937456",
+      "customerid" : 1,
+      "paymentid" :10
+    }
+  ]
+}
