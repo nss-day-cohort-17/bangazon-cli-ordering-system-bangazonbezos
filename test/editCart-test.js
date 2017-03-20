@@ -11,12 +11,12 @@ describe('editCart',()=>{
   });
   describe('quantity', ()=>{
     it('should return a number', ()=>{
-      isNumber(quantity());
+      isNumber(quantity(2, 3));
     })
   });
   describe('confirmEdit', ()=>{
     it('should return a string', ()=>{
-      isString(confirmEdit());
+      isString(confirmEdit(2, 3));
     })
 
   })
