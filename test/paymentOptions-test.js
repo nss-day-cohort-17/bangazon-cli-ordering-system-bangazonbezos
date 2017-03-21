@@ -6,9 +6,9 @@ describe ('confirmCheckout',()=>{
     it('should be a function',()=>{
     isFunction(checkForStoredPayment)
     });
-    it('should return yes/no',()=>{
-      isBoolean(checkForStoredPayment())
-    });
+    // it('should return yes/no',()=>{
+    //   isBoolean(checkForStoredPayment())
+    // });
   });
   describe ('storedPayment',()=>{
     it('should be a function',()=>{

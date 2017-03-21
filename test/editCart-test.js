@@ -9,15 +9,15 @@ describe('editCart',()=>{
     //   isNumber(editCart());
     // })
   });
-  describe('quantity', ()=>{
-    it('should return a number', ()=>{
-      isNumber(quantity(2, 3));
-    })
-  });
-  describe('confirmEdit', ()=>{
-    it('should return a string', ()=>{
-      isString(confirmEdit(2, 3));
-    })
+  // describe('quantity', ()=>{
+  //   it('should return a number', ()=>{
+  //     isNumber(quantity(2, 3));
+  //   })
+  // });
+  // describe('confirmEdit', ()=>{
+  //   it('should return a string', ()=>{
+  //     isString(confirmEdit(2, 3));
+  //   })
 
-  })
+  // })
 })
