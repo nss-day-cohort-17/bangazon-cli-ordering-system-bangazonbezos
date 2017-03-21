@@ -1,5 +1,5 @@
 const {assert : {isFunction,isNumber,isArray,isObject,deepEqual,equal}} =require('chai');
-const {getCustomerId,getOrderId,getProducts,getOrderTotal,getPaymentOptions,getPopularity,getProductId,getActiveCustomers,orderLineId} = require('../lib/queryDB.js');
+const {getCustomerId,getOrderId,getProducts,getOrderTotal,getPaymentOptions,getPopularity,getProductId,getActiveCustomers,getOrderLines,getUnpaidCustomer} = require('../lib/queryDB.js');
 const {customers} = require('../customers.json');
 const {payment_options} =require('../paymentOptions.json')
 // console.log("customers",customers.customers)
@@ -84,7 +84,7 @@ describe ('queryDB',()=>{
       return getProducts()
       .then((data)=>{
         let result = data;
-        console.log("products from test",data)
+        // console.log("products from test",data)
         deepEqual(expected,result);
       });
     });
@@ -159,15 +159,26 @@ describe ('queryDB',()=>{
      });
     });
   });
-  describe('orderLineId',()=>{
+  describe('getOrderLines',()=>{
     it('should be a function',()=>{
-      isFunction(orderLineId)
+      isFunction(getOrderLines)
     });
     it('should return an array ',()=>{
-      return orderLineId()
+      return getOrderLines()
       .then((data)=>{
         isArray(data)
       });
     })
+  });
+  describe('getUnpaidCustomer',()=>{
+    it('should be a function',()=>{
+      isFunction(getUnpaidCustomer);
+    });
+    it('should return an array of unpaid customers',()=>{
+      return getUnpaidCustomer()
+      .then((data)=>{
+        isArray(data)
+      });
+    });
   });
 });
