@@ -22,9 +22,9 @@ describe ('writeDB',()=>{
     it('should be a function',()=>{
       isFunction(createOrderLine)
     });
-    it('should have single argument',()=>{
-      throws(()=>{createOrderLine()})
-    });
+    // it('should have single argument',()=>{
+    //   throws(()=>{createOrderLine()})
+    // });
   });
   describe ('createPaymentOption', ()=>{
     it('should be a function',()=>{
